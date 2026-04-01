@@ -817,6 +817,14 @@ body {
     overflow-x: hidden;
   }
 
+  .navbar {
+    padding: 10px 15px;
+  }
+  .nav-links a {
+    margin-left: 15px;
+    font-size: 12px;
+  }
+
   .hero,
   .hero-wrapper {
     width: 100%;
@@ -826,10 +834,22 @@ body {
   .hero-wrapper {
     position: relative;
   }
+  .hero-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 380px;
+
+    background: #111;
+
+    clip-path: polygon(0 0, 100% 0, 100%, 0 100%);
+    z-index: 1;
+  }
 
   .hero-bg {
-    height: 320px; /* increase this */
-    object-fit: cover;
+    display: none;
   }
 
   .hero {
@@ -842,6 +862,12 @@ body {
   }
   .hero img {
     margin-top: 20px;
+  }
+  .hero-title,
+  .hero-p,
+  .hero-btn {
+    position: relative;
+    z-index: 2;
   }
 
   .hero-left {
@@ -863,9 +889,7 @@ body {
     margin: 10px auto;
     display: inline-block;
   }
-  .navbar {
-    padding: 10px 15px;
-  }
+  
  .hero-btn {
   display: block;
   margin: 15px auto;
@@ -874,7 +898,17 @@ body {
 
   /* SERVICES */
   .services-section {
-    padding-top: 60px;
+    padding: 50px;
+  }
+
+  .services-section::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 180px;
+    background: url("ALL_IMGs/Pravex CEO 2.png") no-repeat center;
+    background-size: contain;
+    margin-top: -30px;
   }
 
   .services-container {
@@ -890,6 +924,7 @@ body {
 
   .services-right img {
     height: 160px;
+    display: none;
   }
 
   .services-text {
@@ -903,7 +938,81 @@ body {
 
   .services-middle {
     margin: 0;
+    text-align: left;
   }
+
+/* 1st CTA Strip */
+.cta-strip {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.cta-left,
+.cta-right {
+  padding: 0;
+  width: 100%;
+}
+
+.cta-left {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-left p {
+  width: 100%;
+  max-width: 300px;   /* slightly tighter = better wrapping */
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+  font-style: normal;
+  word-break: keep-all;
+  overflow-wrap: normal;  /* 🔥 KEY FIX */
+}
+.cta-left h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.cta-right {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.cta-btn {
+  display: inline-block;   /* 🔥 IMPORTANT (not block) */
+  word-break: keep-all;
+  width: auto;             /* remove forced width */
+  max-width: 260px;        /* control size */
+
+  margin: 20px auto 10px;
+  padding: 12px 18px;
+
+  font-size: 14px;
+  border-radius: 30px;
+
+  text-align: center;
+  line-height: 1.4;
+
+  white-space: normal;     /* allow 2 lines only */
+}
+
+.cta-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.cta-contact span {
+  white-space: nowrap;
+  font-size: 16px;
+}
 
   /* WHY SECTION */
   .why-top {
