@@ -6,13 +6,15 @@
 }
 
 body {
-  font-family: 'poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* FONT */
 @font-face {
   font-family: 'Berthusen';
-  src: url('fonts/BerthusenDemo.ttf');
+  src: url('./fonts/berthusen/Berthusen Demo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* HERO WRAPPER */
