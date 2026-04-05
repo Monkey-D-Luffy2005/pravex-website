@@ -13,9 +13,6 @@
 <!-- HERO WRAPPER -->
 <div class="hero-wrapper">
 
-  <!-- BLACK PATCH IMAGE -->
-  <img src="ALL_IMGs/lappy.png" class="hero-bg">
-
   <!-- NAVBAR -->
   <div class="navbar">
     <div class="nav-links">
@@ -31,21 +28,18 @@
   <section id="home" class="hero">
     <div class="container">
       <div class="hero-left">
-        <h1 class="hero-title">Pravex</h1>
+        <img src="ALL_IMGs/Pravex-Logo2.png" class="hero-logo">
 
         <div class="hero-text">
           <p class="hero-p">We help businesses look <br> 
           professional and grow faster.</p>
 
           <a href="https://wa.me/917977766242?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services" 
-          class="hero-btn">Whatsapp Now</a>
+          class="hero-btn">GET STARTED</a>
         </div>
       </div>
-      <div class="laptop-screen">
-        <img class="slide active" src="ALL_IMGs/Cristina B4-B5.png">
-        <img class="slide" src="ALL_IMGs/Sakshi B2.png">
-        <img class="slide" src="ALL_IMGs/Sakshi B3.png">
-        <img class="slide" src="ALL_IMGs/Salexi B4.png">
+      <div class="hero-right">
+        <img src="ALL_IMGs/laptop (image 1).png" class="lappy">
       </div>
     </div>
   </section>
@@ -243,7 +237,7 @@
 
       <!-- CONTACT -->
       <div class="footer-contact">
-        <h4>Get in Touch</h4>
+        <h4>GET IN TOUCH</h4>
         <p>Leave your contact details and <br>my team will get in touch with you.</p>
         <form id="contactForm">
 
@@ -269,18 +263,18 @@
 </div>
 <!-- JS -->
 <script>
-/* lappy scroll */
-const slides = document.querySelectorAll(".laptop-screen .slide");
+// /* lappy scroll */
+// const slides = document.querySelectorAll(".laptop-screen .slide");
 
-let current = 0;
+// let current = 0;
 
-setInterval(() => {
-  slides[current].classList.remove("active");
+// setInterval(() => {
+//   slides[current].classList.remove("active");
 
-  current = (current + 1) % slides.length;
+//   current = (current + 1) % slides.length;
 
-  slides[current].classList.add("active");
-}, 2000);
+//   slides[current].classList.add("active");
+// }, 2000);
 
 /* Why-card */
 const reveals = document.querySelectorAll(".reveal");
