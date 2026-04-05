@@ -14,7 +14,7 @@
 <div class="hero-wrapper">
 
   <!-- BLACK PATCH IMAGE -->
-  <img src="ALL_IMGs/Cover Patch with photo.png" class="hero-bg">
+  <img src="ALL_IMGs/lappy.png" class="hero-bg">
 
   <!-- NAVBAR -->
   <div class="navbar">
@@ -124,7 +124,7 @@
 
       <div class="why-card reveal">
         <div class="why-icon">🏪</div>
-        <h3>Built for Small Business</h3>
+        <h3>Smart & Scalable</h3>
         <p>Simple, affordable solutions made for real business needs.</p>
       </div>
 
@@ -239,11 +239,19 @@
       <div class="footer-contact">
         <h4>Get in Touch</h4>
         <p>Leave your contact details and my team will get in touch with you.</p>
+        <form action="https://formspree.io/f/mojpppnp" method="POST" onsubmit="showMessage()">
 
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="Contact">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="tel" name="contact" placeholder="Contact" required>
+          <input type="text" name="work" placeholder="Type of Work" required>
+          <textarea name="message" placeholder="Your message/Requirement" required></textarea>
+          <input type="hidden" name="_next" value="https://monkey-d-luffy2005.github.io/pravex-website/">
 
-        <button>SUBMIT</button>
+          <button type="submit">SUBMIT</button>
+          <p id="formMsg" style="color:#ffcc00; margin-top:10px; display:none;">
+            Got it! We’ll reach out shortly.
+          </p>
+        </form>
       </div>
     </div>
     
@@ -301,6 +309,10 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+/* Submit MSG */
+function showMessage() {
+  document.getElementById("formMsg").style.display = "block";
+}
 </script>
 </body>
 </html>
