@@ -239,7 +239,7 @@ section {
 
 /* .......Black-CTA....... */
 .cta-strip {
-  background: url("ALL_IMGs/2nd Patch.png") no-repeat center/cover;
+  background: url("ALL_IMGs/2nd\ Patch.png") no-repeat center/cover;
   padding: 35px 0;
 }
 
